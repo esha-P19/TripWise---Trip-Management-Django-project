@@ -1,0 +1,50 @@
+###
+POST  http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username" : "anu",
+    "email" : "anu@example.com",
+    "password" : "anu@123"
+}
+
+
+###
+POST http://127.0.0.1:8000/trip/
+Content-Type: application/json
+Authorization: Basic anu:anu@123
+
+{
+    "title" : "Trip to Munnar",
+    "start_date" : "2026-01-11",
+    "destination" : "Munnar"
+}
+
+
+###
+GET http://127.0.0.1:8000/trip/
+Accept: application/json
+Authorization: Basic anu:anu@123
+
+
+###
+GET http://127.0.0.1:8000/trip/2/
+Accept: application/json
+Authorization: Basic anu:anu@123
+
+
+###
+PUT http://127.0.0.1:8000/trip/1/
+Content-Type: application/json
+Authorization: Basic anu:anu@123
+
+{
+    "title" : "Trip to vagamon",
+    "start_date" : "2026-01-22",
+    "destination" : "vagamon"
+}
+
+
+###
+DELETE  http://127.0.0.1:8000/trip/1/
+Authorization: Basic Nikki:nikki@123
